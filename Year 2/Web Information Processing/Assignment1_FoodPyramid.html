@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <title>Food Pyramid</title>
+        <link rel = "stylesheet" href = "Assignment1_StyleSheet.css">
+        <script src = "Assignment1_Script.js"></script>
+    </head>
+    <body>
+        <center>
+            <h1>My Food Pyramid</h1>
+            <input type = "date"></input>
+        </center>
+        <div class = "PyramidContainer">
+            <div class = "RedTriangle">
+                <button id = "RedAddButton", onclick = "Increase(0); showNum(0)">+</button>
+                <div id = "RedIndicator">0</div>
+                <button id = "RedMinusButton", onclick = "Decrease(0); showNum(0)">-</button>
+            </div>
+            <div class = "OrangeTrapezoid">
+                <button id = "OrangeAddButton", onclick = "Increase(1); showNum(1)">+</button>
+                <button id = "OrangeMinusButton", onclick = "Decrease(1); showNum(1)">-</button>
+                <div id = "OrangeIndicator">0</div>
+            </div>
+
+            <div class = "YellowTrapezoid">
+                <button id = "YellowAddButton", onclick = "Increase(2); showNum(2)">+</button>
+                <button id = "YellowMinusButton", onclick = "Decrease(2); showNum(2)">-</button>
+                <div id = "YellowIndicator">0</div>
+            </div>
+
+            <div class = "BlueTrapezoid">
+                <button id = "BlueAddButton", onclick = "Increase(3); showNum(3);">+</button>
+                <button id = "BlueMinusButton", onclick = "Decrease(3); showNum(3);">-</button>
+                <div id = "BlueIndicator">0</div>
+            </div>
+
+            <div class = "BrownTrapezoid">
+                <button id = "BrownAddButton", onclick = "Increase(4); showNum(4);">+</button>
+                <button id = "BrownMinusButton", onclick = "Decrease(4); showNum(4);">-</button>
+                <div id = "BrownIndicator">0</div>
+            </div>
+            
+            <div class = "GreenTrapezoid">
+                <button id = "GreenAddButton", onclick = "Increase(5); showNum(5);">+</button>
+                <button id = "GreenMinusButton", onclick = "Decrease(5); showNum(5);">-</button>
+                <div id = "GreenIndicator">0</div>
+            </div>
+        </div>
+    </body>
+</html>

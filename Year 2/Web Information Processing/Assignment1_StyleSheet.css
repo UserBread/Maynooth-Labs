@@ -1,0 +1,202 @@
+/* Pyramid Building */
+
+.PyramidContainer {
+    text-align: center;
+    font-size: x-large;
+}
+
+.RedTriangle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid red;
+    margin: auto;
+}
+
+.OrangeTrapezoid {
+    width: 210px;
+    height: 10px;
+    margin: auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid orange;
+}
+
+.YellowTrapezoid {
+    width: 315px;
+    height: 10px;
+    margin: auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid yellow;
+}
+
+.BlueTrapezoid {
+    width: 415px;
+    height: 0;
+    margin: auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid blue;
+}
+
+.BrownTrapezoid {
+    width: 515px;
+    height: 0;
+    margin: auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid brown;
+}
+
+.GreenTrapezoid {
+    width: 615px;
+    height: 0;
+    margin: auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid green;
+}
+
+/* Buttons and Indicators */
+#RedIndicator{
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    display: inline-block;
+    margin-top: 80px;
+    margin-left: -20px;
+    line-height: 40px;
+}
+#RedAddButton {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    border-radius: 50%;
+    border: none;
+    display: none;
+    margin-top: 85px;
+    margin-left: -50px;
+}
+#RedMinusButton {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    border-radius: 50%;
+    border: none;
+    display: none;
+    margin-top: 85px;
+    margin-left: 20px;
+}
+#OrangeIndicator, #YellowIndicator {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: -20px;
+    line-height: 40px;
+}
+#OrangeAddButton, #YellowAddButton {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    border-radius: 50%;
+    border: none;
+    display: none;
+    margin-top: 35px;
+    margin-left: -50px;
+}
+#OrangeMinusButton, #YellowMinusButton {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    border-radius: 50%;
+    border: none;
+    display: none;
+    margin-top: 35px;
+    margin-left: 20px;
+}
+#BlueIndicator, #BrownIndicator, #GreenIndicator {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: -20px;
+    line-height: 40px;
+}
+#BlueAddButton, #BrownAddButton, #GreenAddButton {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    border-radius: 50%;
+    border: none;
+    display: none;
+    margin-top: 25px;
+    margin-left: -50px;
+}
+#BlueMinusButton, #BrownMinusButton, #GreenMinusButton {
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    border-radius: 50%;
+    border: none;
+    display: none;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+/* Hover Effect */
+.RedTriangle:hover #RedAddButton {
+    display: inline-block;
+}
+.RedTriangle:hover #RedMinusButton {
+    display: inline-block;
+}
+.OrangeTrapezoid:hover #OrangeAddButton {
+    display: inline-block;
+}
+.OrangeTrapezoid:hover #OrangeMinusButton {
+    display: inline-block;
+}
+.YellowTrapezoid:hover #YellowAddButton {
+    display: inline-block;
+}
+.YellowTrapezoid:hover #YellowMinusButton {
+    display: inline-block;
+}
+.BlueTrapezoid:hover #BlueAddButton {
+    display: inline-block;
+}
+.BlueTrapezoid:hover #BlueMinusButton {
+    display: inline-block;
+}
+.BrownTrapezoid:hover #BrownAddButton {
+    display: inline-block;
+}
+.BrownTrapezoid:hover #BrownMinusButton {
+    display: inline-block;
+}
+.GreenTrapezoid:hover #GreenAddButton {
+    display: inline-block;
+}
+.GreenTrapezoid:hover #GreenMinusButton {
+    display: inline-block;
+}
