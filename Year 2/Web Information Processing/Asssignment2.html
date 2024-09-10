@@ -1,0 +1,33 @@
+<!--Current Problem: After inputting an incorrect input, the timer still goes off causing a double flash after it ends-->
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Simon Memory Game</title>
+        <link rel = "stylesheet" href = "Assignment2_StyleSheet.css">
+        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css?family=Orbitron">
+    </head>
+    <body>
+        <div class = "GameContainer">
+            <div class = "MainPart">
+                <div class = "HighestScore" id = "highScore", style = "font-family: 'Orbitron', serif";>00</div>
+                <button id = "StartButton", style = "font-family: 'Orbitron', serif";>START</button>
+                <div class = "PreviousScore" id = "prevScore", style = "font-family: 'Orbitron', serif";>00</div>
+                <div id = "Indicator"></div>
+            </div>
+            <div class = "GreenBorder">
+                <button id = "GreenButton"></button>
+            </div>
+            <div class = "RedBorder">
+                <button id = "RedButton"></button>
+            </div>
+            <div class = "YellowBorder">
+                <button id = "YellowButton"></button>
+            </div>
+            <div class = "BlueBorder">
+                <button id = "BlueButton"></button>
+            </div>
+        </div>
+        <script src = "Assignment2_Script.js"></script>
+    </body>
+</html>

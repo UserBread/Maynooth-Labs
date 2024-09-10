@@ -1,0 +1,144 @@
+
+.GameContainer {
+    text-align: center;
+    font-size: 25px;
+}
+/* Main Parts */
+.MainPart {
+    position: fixed;
+    height: 400px;
+    width: 400px;
+    background-color: #121212;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 150px;
+    margin-left: -200px;
+}
+.GreenBorder{
+    position: fixed;
+    height: 225px;
+    width: 225px;
+    background-color: #121212;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: -300px;
+}
+.RedBorder{
+    position: fixed;
+    height: 225px;
+    width: 225px;
+    background-color: #121212;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 75px;
+}
+.YellowBorder{
+    position: fixed;
+    height: 225px;
+    width: 225px;
+    background-color: #121212;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 425px;
+    margin-left: -300px;
+}
+.BlueBorder{
+    position: fixed;
+    height: 225px;
+    width: 225px;
+    background-color: #121212;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 425px;
+    margin-left: 75px;
+}
+
+/* Buttons */
+#GreenButton {
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    border-radius: 50%;
+    border: none;
+    display: inline-block;
+    margin-top: 12.5px;
+    margin-left: -100px;
+}
+#RedButton {
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    border-radius: 50%;
+    border: none;
+    display: inline-block;
+    margin-top: 12.5px;
+    margin-left: -100px;
+}
+#YellowButton {
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    background-color: gold;
+    border-radius: 50%;
+    border: none;
+    display: inline-block;
+    margin-top: 12.5px;
+    margin-left: -100px;
+}
+#BlueButton {
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    border-radius: 50%;
+    border: none;
+    display: inline-block;
+    margin-top: 12.5px;
+    margin-left: -100px;
+}
+#StartButton {
+    position: fixed;
+    background-color: gray;
+    height: 50px;
+    width: 125px;
+    margin-top: 170px;
+    margin-left: -65px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Display*/
+.HighestScore {
+    position: fixed;
+    background-color: gray;
+    height: 50px;
+    width: 50px;
+    margin-top: 170px;
+    margin-left: 78px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+.PreviousScore {
+    position: fixed;
+    background-color: gray;
+    height: 50px;
+    width: 50px;
+    margin-top: 170px;
+    margin-left: 266px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+#Indicator {
+    position: fixed;
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-top: 235px;
+    margin-left: 192px;
+}
