@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+}
+table, th, td {
+    border: 1.5px solid;
+}
+table {
+    border-collapse: collapse;
+}
+th {
+    background-color: gray;
+    text-align: center;
+}
+.even {
+    background-color: lightgray;
+}
+
+.odd {
+    background-color: white;
+}
+.assignment {
+    text-align: right;
+}
