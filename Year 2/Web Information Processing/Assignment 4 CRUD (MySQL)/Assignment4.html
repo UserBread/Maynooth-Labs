@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 4</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script	type="text/javascript"	
+		    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        <style>
+            /* Extra Styles for the Bootstrap Forms */
+            h1 {
+                font: 30px Verdana;
+                text-align: center;
+            }
+            h2 {
+                font: 20px Verdana;
+                text-align: center;
+            }
+            legend {
+                padding: 10px;
+                font: 30px Verdana
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <form id="addUserForm" class="form-horizontal" method="post">
+                    <fieldset>
+                        <!-- Form Name - Create -->
+                        <legend>Create User</legend>
+                        
+                        <!-- Select Title -->
+                        <div class="form-group">
+                        <label class="col-md-4 control-label" for="title">Title</label>
+                            <div class="col-md-4">
+                                <select id="title" name="title" class="form-control">
+                                <option value="Mx">Mx</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Ms">Ms</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Dr">Dr</option>
+                                <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- First Name input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="firstname">First Name(s)</label>  
+                            <div class="col-md-4">
+                                <input id="firstname" name="firstname" type="text" placeholder="First Name(s)" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        
+                        <!-- Surname input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="surname">Surname</label>  
+                            <div class="col-md-4">
+                                <input id="surname" name="surname" type="text" placeholder="Surname" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        
+                        <!-- Mobile Number input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="mobile">Mobile Number</label>  
+                            <div class="col-md-4">
+                                <input id="mobile" name="mobile" type="tel" placeholder="Mobile Number" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        
+                        <!-- Email Address input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="email">Email Address</label>  
+                            <div class="col-md-4">
+                                <input id="email" name="email" type="email" placeholder="Email Address" class="form-control input-md" required="">  
+                            </div>
+                        </div>
+                        
+                        <!-- Home Address Line 1 input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="homeaddress1">Home Address Line 1</label>  
+                            <div class="col-md-4">
+                                <input id="homeaddress1" name="homeaddress1" type="text" placeholder="Home Address Line 1" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        
+                        <!-- Home Address Line 2 input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="homeaddress2">Home Address Line 2</label>  
+                            <div class="col-md-4">
+                                <input id="homeaddress2" name="homeaddress2" type="text" placeholder="Home Address Line 2" class="form-control input-md">
+                            </div>
+                        </div>
+                        
+                        <!-- Home Town input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="hometown">Home Town</label>  
+                            <div class="col-md-4">
+                                <input id="hometown" name="hometown" type="text" placeholder="Home Town" class="form-control input-md" required="">    
+                            </div>
+                        </div>
+                        
+                        <!-- Home County/City input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="homecountycity">Home County/City</label>  
+                            <div class="col-md-4">
+                                <input id="homecountycity" name="homecountycity" type="text" placeholder="Home County/City" class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        
+                        <!-- Home Eircode input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="homeeircode">Home Eircode</label>  
+                            <div class="col-md-4">
+                                <input id="homeeircode" name="homeeircode" type="text" placeholder="Home Eircode" class="form-control input-md"> 
+                            </div>
+                        </div>
+                        
+                        <!-- Submit User Data Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="submit"></label>
+                            <div class="col-md-4">
+                                <input type="submit" value="Send User Data" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <form id="getUserData" class="form-horizontal" method="get">
+                    <fieldset>
+                    
+                        <!-- Form Name - Retrieve -->
+                        <legend>Retrieve User Data</legend>
+                        
+                        <!-- Show User Data -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="showUserDatabase">User Database</label>
+                            <div class="col-md-4">
+                                <textarea class="form-control" id="showUserDatabase"
+                                    name="showUserDatabase">Retrieved Database displayed here!</textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Get User Data Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="submit"></label>
+                            <div class="col-md-4">
+                                <input type="submit" value="Get User Data" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <form id="updateUserData" class="form-horizontal" method="put">
+                    <fieldset>
+                    
+                       <!-- Form Name - Update -->
+                        <legend>Update Shipping Address</legend>
+
+                        <!-- Email Address Check input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="emailupd">Email Address</label>  
+                            <div class="col-md-4">
+                                <input id="emailupd" name="emailupd" type="text" placeholder="Email Address" class="form-control input-md" required="">    
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address Line 1 input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="shippingaddress1">Shipping Address Line 1</label>  
+                            <div class="col-md-4">
+                                <input id="shippingaddress1" name="shippingaddress1" type="text" placeholder="Shipping Address Line 1" class="form-control input-md" required=""> 
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address Line 2 input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="shippingaddress2">Shipping Address Line 2</label>  
+                            <div class="col-md-4">
+                                <input id="shippingaddress2" name="shippingaddress2" type="text" placeholder="Shipping Address Line 2" class="form-control input-md" required="">                           
+                            </div>
+                        </div>
+
+                        <!-- Shipping Town input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="shippingtown">Shipping Town</label>  
+                            <div class="col-md-4">
+                                <input id="shippingtown" name="shippingtown" type="text" placeholder="Shipping Town" class="form-control input-md" required="">                            
+                            </div>
+                        </div>
+
+                        <!-- Shipping County/City input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="shippingcountycity">Shipping County/City</label>  
+                            <div class="col-md-4">
+                                <input id="shippingcountycity" name="shippingcountycity" type="text" placeholder="Shipping County/City" class="form-control input-md" required="">
+                            </div>
+                        </div>
+
+                        <!-- Shipping Eircode input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="shippingeircode">Shipping Eircode</label>  
+                            <div class="col-md-4">
+                                <input id="shippingeircode" name="shippingeircode" type="text" placeholder="Shipping Eircode" class="form-control input-md" required="">                           
+                            </div>
+                        </div>
+
+                        <!-- Update User Shipping Address Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="submit"></label>
+                            <div class="col-md-4">
+                                <input type="submit" value="Update User Data" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <form id="deleteUserData" class="form-horizontal" method="delete">
+                    <fieldset>
+                    
+                       <!-- Form Name - Delete -->
+                        <legend>Delete User Data</legend>
+
+                        <!-- First Name Delete input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="firstnamedel">First Name</label>  
+                            <div class="col-md-4">
+                                <input id="firstnamedel" name="firstnamedel" type="text" placeholder="First Name" class="form-control input-md" required="">    
+                            </div>
+                        </div>
+
+                        <!-- Mobile Number Delete input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="mobiledel">Mobile Number</label>  
+                            <div class="col-md-4">
+                                <input id="mobiledel" name="mobiledel" type="text" placeholder="Mobile Number" class="form-control input-md" required=""> 
+                            </div>
+                        </div>
+
+                        <!-- Email Address Delete input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="emaildel">email Address</label>  
+                            <div class="col-md-4">
+                                <input id="emaildel" name="emaildel" type="text" placeholder="Email Address" class="form-control input-md" required="">                           
+                            </div>
+                        </div>
+
+                        <!-- Delete User Data Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="submit"></label>
+                            <div class="col-md-4">
+                                <input type="submit" value="Delete User Data" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <script src="Assignment4_Script.js"></script>
+    </body>
+</html>
