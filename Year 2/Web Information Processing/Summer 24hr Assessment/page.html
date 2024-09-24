@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Summer 24hr Coding Exam</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        /* Extra Styles for the Bootstrap Forms */
+        h1 {
+            font: 30px Verdana;
+            text-align: center;
+        }
+
+        h2 {
+            font: 20px Verdana;
+            text-align: center;
+        }
+
+        legend {
+            padding: 10px;
+            font: 30px Verdana
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Button to swap between different forms -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="button1id"></label>
+            <div class="col-md-8">
+                <button id="tenantButton" name="tenantButton" class="btn btn-primary">Tenant</button>
+                <button id="landlordButton" name="landlordButton" class="btn btn-primary">Landlord</button>
+                <button id="contractButton" name="contractButton" class="btn btn-primary">Contracts</button>
+            </div>
+        </div>
+
+        <!-- Tenant Form -->
+        <form id="addTenantForm" class="form-horizontal" method="post">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Create a Tenant</legend>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="type">Title*</label>
+                    <div class="col-md-4">
+                        <select id="titleT" name="type" class="form-control">
+                            <option value="Mx">Mx</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Dr">Dr</option>
+                            <option value="Other">Other (specify)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Other Text input-->
+                <div id='otherTitleT' class="form-group">
+                    <label class="col-md-4 control-label" for="other">Other (specify)*</label>
+                    <div class="col-md-4">
+                        <input id="otherT" name="other" type="text" placeholder="Enter your title"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- First Name Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="firstname">First Name(s)*</label>
+                    <div class="col-md-4">
+                        <input id="firstname" name="firstname" type="text" placeholder="Enter your first name(s)"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Surname Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="surname">Surname*</label>
+                    <div class="col-md-4">
+                        <input id="surname" name="surname" type="text" placeholder="Enter your surname"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Phone Number Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="phonenumber">Phone Number*</label>
+                    <div class="col-md-4">
+                        <input id="phonenumber" name="phonenumber" type="text" placeholder="Enter your phone number"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Email Address Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="emailaddress">Email Address*</label>
+                    <div class="col-md-4">
+                        <input id="emailaddress" name="emailaddress" type="email" placeholder="Enter your email address"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Address Line 1 Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="addressline1">Address Line 1*</label>
+                    <div class="col-md-4">
+                        <input id="addressline1" name="addressline1" type="text" placeholder="Enter your address line 1"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Address Line 2 Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="addressline2">Address Line 2</label>
+                    <div class="col-md-4">
+                        <input id="addressline2" name="addressline2" type="text" placeholder="Enter your address line 2"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Town Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="town">Town*</label>
+                    <div class="col-md-4">
+                        <input id="town" name="town" type="text" placeholder="Enter your town"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- County/City Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="countycity">County/City*</label>
+                    <div class="col-md-4">
+                        <input id="countycity" name="countycity" type="text" placeholder="Enter your county/city"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Eircode Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="eircode">Eircode</label>
+                    <div class="col-md-4">
+                        <input id="eircode" name="eircode" type="text" placeholder="Enter your eircode"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Submit Tenant Data Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Send Tenant Data" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+
+            </fieldset>
+        </form>
+        <form id="getTenantData" class="form-horizontal" method="get">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Retrieve a Tenant</legend>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="tenantData">Get Tenant Data</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="tenantData"
+                            name="tenantData">Retrieved Database displayed here!</textarea>
+                    </div>
+                </div>
+
+                <!-- Get User Data Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Get Tenant Data" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="updateTenantData" class="form-horizontal" method="put">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Update a Tenant</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="currentTEmailAddress">Email Address*</label>
+                    <div class="col-md-4">
+                        <input id="currentTEmailAddress" name="currentTEmailAddress" type="text"
+                            placeholder="Enter the current email address" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Multiple Checkboxes (inline) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="checkboxes">Select what you would like to update</label>
+                    <div class="col-md-4">
+                        <label class="checkbox-inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" id="checkboxes-0" value="Title">
+                            Title
+                        </label>
+                        <label class="checkbox-inline" for="checkboxes-1">
+                            <input type="checkbox" name="checkboxes" id="checkboxes-1" value="First Name">
+                            First Name
+                        </label>
+                        <label class="checkbox-inline" for="checkboxes-2">
+                            <input type="checkbox" name="checkboxes" id="checkboxes-2" value="Surname">
+                            Surname
+                        </label>
+                        <label class="checkbox-inline" for="checkboxes-3">
+                            <input type="checkbox" name="checkboxes" id="checkboxes-3" value="Phone Number">
+                            Phone Number
+                        </label>
+                        <label class="checkbox-inline" for="checkboxes-4">
+                            <input type="checkbox" name="checkboxes" id="checkboxes-4" value="Home Address">
+                            Home Address
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTTitleBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newTTitle">New Title</label>
+                    <div class="col-md-4">
+                        <input id="newTTitle" name="newTTitle" type="text" placeholder="Enter new Title"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTFirstnameBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newTFirstname">First Name</label>
+                    <div class="col-md-4">
+                        <input id="newTFirstname" name="newTFirstname" type="text" placeholder="Enter new First Name"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTSurnameBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newTSurname">New Surname</label>
+                    <div class="col-md-4">
+                        <input id="newTSurname" name="newTSurname" type="text" placeholder="Enter new Surname"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTNumberBox" class="form-group">
+                    <label class="col-md-4 control-label" for="NewTNumber">New Phone Number</label>
+                    <div class="col-md-4">
+                        <input id="NewTNumber" name="NewTNumber" type="text" placeholder="Enter new Phone Number"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTAddressLine1Box" class="form-group">
+                    <label class="col-md-4 control-label" for="newTAddressLine1">New Address Line 1</label>
+                    <div class="col-md-4">
+                        <input id="newTAddressLine1" name="newTAddressLine1" type="text"
+                            placeholder="Enter new Address Line 1" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTAddressLine2Box" class="form-group">
+                    <label class="col-md-4 control-label" for="newTAddressLine2">New Address Line 2</label>
+                    <div class="col-md-4">
+                        <input id="newTAddressLine2" name="newTAddressLine2" type="text"
+                            placeholder="Enter new Address Line 2" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTTownBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newTTown">New Town</label>
+                    <div class="col-md-4">
+                        <input id="newTTown" name="newTTown" type="text" placeholder="Enter new Town"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTCountyCityBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newTCountyCity">New County/City</label>
+                    <div class="col-md-4">
+                        <input id="newTCountyCity" name="newTCountyCity" type="text" placeholder="Enter new County/City"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTEircodeBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newTEircode">New Eircode</label>
+                    <div class="col-md-4">
+                        <input id="newTEircode" name="newTEircode" type="text" placeholder="Enter new Eircode"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Update Tenant Data Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Update Tenant Data" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="deleteTenantData" class="form-horizontal" method="delete">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Delete a Tenant</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="delTemail">Email Address*</label>
+                    <div class="col-md-4">
+                        <input id="delTemail" name="delTemail" type="text"
+                            placeholder="Enter the tenant's email address" class="form-control input-md" required="">
+                    </div>
+                </div>
+                <!-- Delete Tenant Data Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Delete Tenant Data" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- Landlord Form -->
+        <form id="addLandLordForm" class="form-horizontal" method="post">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Create a Landlord</legend>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="type">Title*</label>
+                    <div class="col-md-4">
+                        <select id="titleLL" name="type" class="form-control">
+                            <option value="Mx">Mx</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Dr">Dr</option>
+                            <option value="Other">Other (specify)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Other Text input-->
+                <div id="otherTitleLL" class="form-group">
+                    <label class="col-md-4 control-label" for="other">Other (specify)*</label>
+                    <div class="col-md-4">
+                        <input id="otherLL" name="other" type="text" placeholder="Enter your title"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="firstname">First Name(s)*</label>
+                    <div class="col-md-4">
+                        <input id="LLfirstname" name="firstname" type="text" placeholder="Enter your first name(s)"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="surname">Surname*</label>
+                    <div class="col-md-4">
+                        <input id="LLsurname" name="surname" type="text" placeholder="Enter your surname"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="dob">Date of Birth*</label>
+                    <div class="col-md-4">
+                        <input id="LLdob" name="dob" type="date" placeholder="Enter your date of birth"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="number">Phone Number*</label>
+                    <div class="col-md-4">
+                        <input id="LLnumber" name="number" type="text" placeholder="Enter your phone number"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="emailAddress">Email Address*</label>
+                    <div class="col-md-4">
+                        <input id="LLemailAddress" name="emailAddress" type="email"
+                            placeholder="Enter your email address" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="addressline1">Address Line 1*</label>
+                    <div class="col-md-4">
+                        <input id="LLaddressline1" name="addressline1" type="text"
+                            placeholder="Enter your address line 1" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="addressline2">Address Line 2</label>
+                    <div class="col-md-4">
+                        <input id="LLaddressline2" name="addressline2" type="text"
+                            placeholder="Enter your address line 2" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="town">Town*</label>
+                    <div class="col-md-4">
+                        <input id="LLtown" name="town" type="text" placeholder="Enter your town"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="countycity">County/City*</label>
+                    <div class="col-md-4">
+                        <input id="LLcountycity" name="countycity" type="text" placeholder="Enter your county/city"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="eircode">Eircode</label>
+                    <div class="col-md-4">
+                        <input id="LLeircode" name="eircode" type="text" placeholder="Enter your eircode"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Multiple Checkboxes -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="permissionToRent">Do they have permission to rent from
+                        the council?</label>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label for="permissionToRent-0">
+                                <input type="checkbox" name="permissionToRent" id="permissionToRent-0" value="Yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="permissionToRent-1">
+                                <input type="checkbox" name="permissionToRent" id="permissionToRent-1" value="No">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multiple Checkboxes -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="permissionToContact">Can tenants contact them?</label>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label for="permissionToContact-0">
+                                <input type="checkbox" name="permissionToContact" id="permissionToContact-0"
+                                    value="Yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="permissionToContact-1">
+                                <input type="checkbox" name="permissionToContact" id="permissionToContact-1" value="No">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Landlord Data Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Add Landlord Data" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="getLandLordData" class="form-horizontal" method="get">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Retrieve a Landlord</legend>
+
+                <!-- Tenet Email Text input
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="getLLemail">Email Address*</label>
+                    <div class="col-md-4">
+                        <input id="getTemail" name="getTemail" type="text"
+                            placeholder="Enter the email address of the landlord" class="form-control input-md"
+                            required="">
+
+                    </div>
+                </div> -->
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="landlordData">Get Landlord Data</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="landlordData"
+                            name="tenantData">Retrieved Database displayed here!</textarea>
+                    </div>
+                </div>
+
+                <!-- Get User Data Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Get Landlord Data" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="updateLandLordData" class="form-horizontal" method="put">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Update a Landlord</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="currentLLEmailAddress">Email Address*</label>
+                    <div class="col-md-4">
+                        <input id="currentLLEmailAddress" name="currentLLEmailAddress" type="email"
+                            placeholder="Enter the current email address" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Multiple Checkboxes (inline) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="checkboxes">Select what you would like to update</label>
+                    <div class="col-md-4">
+                        <label class="checkbox-inline" for="LLcheckboxes-0">
+                            <input type="checkbox" name="checkboxes" id="LLcheckboxes-0" value="Title">
+                            Title
+                        </label>
+                        <label class="checkbox-inline" for="LLcheckboxes-1">
+                            <input type="checkbox" name="checkboxes" id="LLcheckboxes-1" value="First Name">
+                            First Name
+                        </label>
+                        <label class="checkbox-inline" for="LLcheckboxes-2">
+                            <input type="checkbox" name="checkboxes" id="LLcheckboxes-2" value="Surname">
+                            Surname
+                        </label>
+                        <label class="checkbox-inline" for="LLcheckboxes-3">
+                            <input type="checkbox" name="checkboxes" id="LLcheckboxes-3" value="Date of Birth">
+                            Date of Birth
+                        </label>
+                        <label class="checkbox-inline" for="LLcheckboxes-4">
+                            <input type="checkbox" name="checkboxes" id="LLcheckboxes-4" value="Phone Number">
+                            Phone Number
+                        </label>
+                        <label class="checkbox-inline" for="LLcheckboxes-5">
+                            <input type="checkbox" name="checkboxes" id="LLcheckboxes-5" value="Home Address">
+                            Home Address
+                        </label>
+                        <label class="checkbox-inline" for="LLcheckboxes-6">
+                            <input type="checkbox" name="checkboxes" id="LLcheckboxes-6" value="Permission To Rent">
+                            Permission To Rent
+                        </label>
+                        <label class="checkbox-inline" for="LLcheckboxes-7">
+                            <input type="checkbox" name="checkboxes" id="LLcheckboxes-7"
+                                value="Permission To Contacted">
+                            Permission To Contacted
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLLTitleBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newLLTitle">New Title</label>
+                    <div class="col-md-4">
+                        <input id="newLLTitle" name="newLLTitle" type="text" placeholder="Enter new Title"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLLFirstnameBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newLLFirstname">First Name</label>
+                    <div class="col-md-4">
+                        <input id="newLLFirstname" name="newLLFirstname" type="text" placeholder="Enter new First Name"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLLSurnameBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newLLSurname">New Surname</label>
+                    <div class="col-md-4">
+                        <input id="newLLSurname" name="newLLSurname" type="text" placeholder="Enter new Surname"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLLDobBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newDob">New Date of Birth</label>
+                    <div class="col-md-4">
+                        <input id="newDob" name="newDob" type="date" placeholder="Enter new Date of Birth"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLLNumberBox" class="form-group">
+                    <label class="col-md-4 control-label" for="NewLLNumber">New Phone Number</label>
+                    <div class="col-md-4">
+                        <input id="NewLLNumber" name="NewLLNumber" type="text" placeholder="Enter new Phone Number"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLLAddressLine1Box" class="form-group">
+                    <label class="col-md-4 control-label" for="newAddressLine1">New Address Line 1</label>
+                    <div class="col-md-4">
+                        <input id="newAddressLine1" name="newAddressLine1" type="text"
+                            placeholder="Enter new Address Line 1" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLLAddressLine2Box" class="form-group">
+                    <label class="col-md-4 control-label" for="newAddressLine2">New Address Line 2</label>
+                    <div class="col-md-4">
+                        <input id="newAddressLine2" name="newAddressLine2" type="text"
+                            placeholder="Enter new Address Line 2" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLLTownBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newTown">New Town</label>
+                    <div class="col-md-4">
+                        <input id="newTown" name="newTown" type="text" placeholder="Enter new Town"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLLCountyCityBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newCountyCity">New County/City</label>
+                    <div class="col-md-4">
+                        <input id="newCountyCity" name="newCountyCity" type="text" placeholder="Enter new County/City"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLLEircodeBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newEircode">New Eircode</label>
+                    <div class="col-md-4">
+                        <input id="newEircode" name="newEircode" type="text" placeholder="Enter new Eircode"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div id="newLLPermissionToRentBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newPermissionToRent">New Permission To Rent</label>
+                    <div class="col-md-4">
+                        <select id="newPermissionToRent" name="newPermissionToRent" class="form-control">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div id="newLLPermissionToContactBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newPermissionToContact">New Permission To Contact</label>
+                    <div class="col-md-4">
+                        <select id="newPermissionToContact" name="newPermissionToContact" class="form-control">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Update Landlord Data" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="deleteLandLordData" class="form-horizontal" method="delete">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Delete a Landlord</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="delLLemail">Email Address*</label>
+                    <div class="col-md-4">
+                        <input id="delLLemail" name="delLLemail" type="text"
+                            placeholder="Enter the email of the landlord" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+                <!-- Delete Landlord Data Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Delete Landlord Data" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- Contract Form -->
+        <form id="addContractForm" class="form-horizontal" method="post">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Create a Contract</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="contractdate">Contract Date*</label>
+                    <div class="col-md-4">
+                        <input id="contractdate" name="contractdate" type="date" placeholder="Enter your contract date"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="propertyaddress">Property Address*</label>
+                    <div class="col-md-4">
+                        <input id="propertyaddress" name="propertyaddress" type="text"
+                            placeholder="Enter your property address" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Multiple Radios (inline) -->
+                <div id="numoftenants" class="form-group">
+                    <label class="col-md-4 control-label" for="numoftenants">Number of Tenants</label>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="numoftenants-0">
+                            <input type="radio" name="numoftenants" id="numoftenants-0" value="1" checked="checked">
+                            1
+                        </label>
+                        <label class="radio-inline" for="numoftenants-1">
+                            <input type="radio" name="numoftenants" id="numoftenants-1" value="2">
+                            2
+                        </label>
+                        <label class="radio-inline" for="numoftenants-2">
+                            <input type="radio" name="numoftenants" id="numoftenants-2" value="3">
+                            3
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="tenant1" class="form-group">
+                    <label class="col-md-4 control-label" for="tenant1">Email of Tenant 1*</label>
+                    <div class="col-md-4">
+                        <input id="tenantnum1" name="tenant1" type="email"
+                            placeholder="Enter the email of the first tenant" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="tenant2" class="form-group">
+                    <label class="col-md-4 control-label" for="tenant2">Email of Tenant 2*</label>
+                    <div class="col-md-4">
+                        <input id="tenantnum2" name="tenant2" type="email"
+                            placeholder="Enter the email of the second tenant" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="tenant3" class="form-group">
+                    <label class="col-md-4 control-label" for="tenant3">Email of Tenant 3*</label>
+                    <div class="col-md-4">
+                        <input id="tenantnum3" name="tenant3" type="email"
+                            placeholder="Enter the email of the third tenant" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="landlord">Landlord*</label>
+                    <div class="col-md-4">
+                        <input id="landlord" name="landlord" type="email" placeholder="Enter the email of the landlord"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="fee">Monthly Fee (€)*</label>
+                    <div class="col-md-4">
+                        <input id="fee" name="fee" type="number" placeholder="Enter the monthly fee(€)"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="doornum">Property Door Number*</label>
+                    <div class="col-md-4">
+                        <input id="doornum" name="doornum" type="number" placeholder="Enter the property door number"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="length">Contract Length*</label>
+                    <div class="col-md-4">
+                        <select id="length" name="length" class="form-control">
+                            <option value="Month">Month</option>
+                            <option value="Year">Year</option>
+                            <option value="Permanent">Permanent</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="type">Property Type*</label>
+                    <div class="col-md-4">
+                        <select id="propertyType" name="type" class="form-control">
+                            <option value="Apartment">Apartment</option>
+                            <option value="Detached">Detached</option>
+                            <option value="Semi-Detached">Semi-Detached</option>
+                            <option value="Other">Other (specify)</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Other Text input-->
+                <div id="otherType" class="form-group">
+                    <label class="col-md-4 control-label" for="other">Other (specify)*</label>
+                    <div class="col-md-4">
+                        <input id="otherPropertyType" name="other" type="text" placeholder="Enter your property type"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Get User Data Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Send Contract Data" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="getContractForm" class="form-horizontal" method="get">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Retrieve a Contract</legend>
+
+                <!-- Text input
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="getLLCemail">Email Address*</label>
+                    <div class="col-md-4">
+                        <input id="getLLemail" name="getLLCemail" type="text" placeholder="Enter the Landlord's email"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div> -->
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="contracts">Contracts</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="contracts"
+                            name="contracts">Retrieved Database displayed here!</textarea>
+                    </div>
+                </div>
+
+                <!-- Get User Data Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Get Contracts" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="updateContractForm" class="form-horizontal" method="put">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Update a Landlord</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="contractID">Contract ID*</label>
+                    <div class="col-md-4">
+                        <input id="contractID" name="contractID" type="text" placeholder="Enter the the contract ID"
+                            class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Multiple Checkboxes (inline) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="checkboxes">Select What you would like to update</label>
+                    <div class="col-md-4">
+                        <label class="checkbox-inline" for="Ccheckboxes-0">
+                            <input type="checkbox" name="checkboxes" id="Ccheckboxes-0" value="Contract Date">
+                            Contract Date
+                        </label>
+                        <label class="checkbox-inline" for="Ccheckboxes-1">
+                            <input type="checkbox" name="checkboxes" id="Ccheckboxes-1" value="Property Address">
+                            Property Address
+                        </label>
+                        <label class="checkbox-inline" for="Ccheckboxes-2">
+                            <input type="checkbox" name="checkboxes" id="Ccheckboxes-2" value="Tenants">
+                            Tenants
+                        </label>
+                        <label class="checkbox-inline" for="Ccheckboxes-3">
+                            <input type="checkbox" name="checkboxes" id="Ccheckboxes-3" value="Landlord">
+                            Landlord
+                        </label>
+                        <label class="checkbox-inline" for="Ccheckboxes-4">
+                            <input type="checkbox" name="checkboxes" id="Ccheckboxes-4" value="Fee">
+                            Fee
+                        </label>
+                        <label class="checkbox-inline" for="Ccheckboxes-5">
+                            <input type="checkbox" name="checkboxes" id="Ccheckboxes-5" value="Property Door Number">
+                            Property Door Number
+                        </label>
+                        <label class="checkbox-inline" for="Ccheckboxes-6">
+                            <input type="checkbox" name="checkboxes" id="Ccheckboxes-6" value="Contract Length">
+                            Contract Length
+                        </label>
+                        <label class="checkbox-inline" for="Ccheckboxes-7">
+                            <input type="checkbox" name="checkboxes" id="Ccheckboxes-7" value="Property Type">
+                            Property Type
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newContractDateBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newContractDate">New Contract Date</label>
+                    <div class="col-md-4">
+                        <input id="newContractDate" name="newContractDate" type="date"
+                            placeholder="Enter new Contract Date" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newPropertyAddressBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newPropertyAddress">New Property Address</label>
+                    <div class="col-md-4">
+                        <input id="newPropertyAddress" name="newPropertyAddress" type="text"
+                            placeholder="Enter new Property Address" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Multiple Radios (inline) -->
+                <div id="newNumberOfTenantsBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newTenants">New Number of Tenants</label>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="newTenants-0">
+                            <input type="radio" name="newTenants" id="newTenants-0" value="1" checked="checked">
+                            1
+                        </label>
+                        <label class="radio-inline" for="newTenants-1">
+                            <input type="radio" name="newTenants" id="newTenants-1" value="2">
+                            2
+                        </label>
+                        <label class="radio-inline" for="newTenants-2">
+                            <input type="radio" name="newTenants" id="newTenants-2" value="3">
+                            3
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTenant1Box" class="form-group">
+                    <label class="col-md-4 control-label" for="newTenantNum1">New Email of Tenant 1</label>
+                    <div class="col-md-4">
+                        <input id="newTenantNum1" name="newTenantNum1" type="email"
+                            placeholder="Enter new email of Tenant 1" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTenant2Box" class="form-group">
+                    <label class="col-md-4 control-label" for="newTenantNum2">New Email of Tenant 2</label>
+                    <div class="col-md-4">
+                        <input id="newTenantNum2" name="newTenantNum2" type="email"
+                            placeholder="Enter new email of Tenant 2" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newTenant3Box" class="form-group">
+                    <label class="col-md-4 control-label" for="newTenantNum3">New Email of Tenant 3</label>
+                    <div class="col-md-4">
+                        <input id="newTenantNum3" name="newTenantNum3" type="email"
+                            placeholder="Enter new email of Tenant 3" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newLandlordBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newLandlord">New Email of Landlord</label>
+                    <div class="col-md-4">
+                        <input id="newLandlord" name="newLandlord" type="email"
+                            placeholder="Enter new email of Landlord" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newFeeBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newFee">New Fee</label>
+                    <div class="col-md-4">
+                        <input id="newFee" name="newFee" type="number" placeholder="Enter new Fee"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newDoorNumberBox" class="form-group">
+                    <label class="col-md-4 control-label" for="NewDoorNumber">New Property Door Number</label>
+                    <div class="col-md-4">
+                        <input id="NewDoorNumber" name="NewDoorNumber" type="number"
+                            placeholder="Enter new Property Door Number" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div id="newContractLengthBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newContractLength">New Contract Length</label>
+                    <div class="col-md-4">
+                        <select id="newContractLength" name="newContractLength" class="form-control">
+                            <option value="Month">Month</option>
+                            <option value="Year">Year</option>
+                            <option value="Permanent">Permanent</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div id="newPropertyTypeBox" class="form-group">
+                    <label class="col-md-4 control-label" for="newPropertyType">New Property Type</label>
+                    <div class="col-md-4">
+                        <input id="newPropertyType" name="newPropertyType" type="text"
+                            placeholder="Enter new Property Type" class="form-control input-md">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Update Contract" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <form id="deleteContractForm" class="form-horizontal" method="delete">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Delete a Contract</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="delContractID">Contract ID*</label>
+                    <div class="col-md-4">
+                        <input id="delContractID" name="delContractID" type="text"
+                            placeholder="Enter the Contract ID" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Get User Data Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <input type="submit" value="Delete Landlord Contracts" class="btn btn-primary">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
