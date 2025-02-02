@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #ff8a8a, #83C1D5);
+  color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.card strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.next-button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #87cefa, #4682b4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(70, 130, 180, 0.4);
+}
+
+.next-button:hover {
+  background: linear-gradient(90deg, #4682b4, #87cefa);
+  box-shadow: 0px 4px 12px rgba(70, 130, 180, 0.6);
+  transform: translateY(-2px);
+}
+
+.next-button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 5px rgba(70, 130, 180, 0.4);
+}
+
+.accept-button {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #87cefa, #4682b4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(70, 130, 180, 0.4);
+}
+
+.accept-button:hover {
+  background: linear-gradient(90deg, #4682b4, #87cefa);
+  box-shadow: 0px 4px 12px rgba(70, 130, 180, 0.6);
+  transform: translateY(-2px);
+}
+
+.accept-button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 5px rgba(70, 130, 180, 0.4);
+}
+
+.reject-button {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #87cefa, #4682b4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(70, 130, 180, 0.4);
+}
+
+.reject-button:hover {
+  background: linear-gradient(90deg, #4682b4, #87cefa);
+  box-shadow: 0px 4px 12px rgba(70, 130, 180, 0.6);
+  transform: translateY(-2px);
+}
+
+.reject-button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 5px rgba(70, 130, 180, 0.4);
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .next-button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .next-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.photo-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.photo-carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.next-button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #87cefa, #4682b4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-button:hover {
+  background: linear-gradient(90deg, #4682b4, #87cefa);
+  transform: translateY(-2px);
+}
+
+/* Accepted Matches Section */
+.accepted-profiles {
+  width: 100%;
+  max-width: 500px;
+  /* Matches the width of the main card */
+  margin-top: 20px;
+  /* Add space between the main card and accepted matches */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+}
+
+.accepted-profiles h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.accepted-profiles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accepted-profiles li {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: #333;
+}
+
+.accepted-profiles li:last-child {
+  margin-bottom: 0;
+}

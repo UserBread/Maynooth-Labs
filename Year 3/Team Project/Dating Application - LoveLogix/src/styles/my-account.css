@@ -1,0 +1,335 @@
+@font-face {
+  font-family: 'LobsterFont';
+  src: url('./fonts/LobsterFont.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Robotoload';
+  src: url('./fonts/Robotoload.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto';
+  color: #333;
+  background: linear-gradient(to bottom, #ff8a8a, #83C1D5);
+  min-height: 100vh;
+}
+
+header {
+  margin-bottom: 120px;
+  padding-right: 5%;
+  padding-top: 5%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome {
+  align-items: center;
+  font-family: LobsterFont;
+  margin-left: 30px;
+  font-size: 2.5em;
+  color: white;
+}
+
+.nav-links {
+  margin-top: 25%;
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  margin-top: -50px;
+}
+
+.about_button {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #67BABD;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: Roboto;
+  transition: background-color 0.3s;
+}
+
+.about_button:hover {
+  background-color: #387678;
+}
+
+.login_button {
+  background-color: #67BABD;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: Roboto;
+  transition: background-color 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login_button:hover {
+  background-color: #387678;
+}
+
+.main-container {
+  min-width: 1200px;
+  height: auto;
+  display: flex;
+  padding: 20px;
+}
+
+.new-section {
+  background-color: black;
+  background: linear-gradient(to top, white 80%, #387678 20%);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
+  min-width: 1200px;
+  height: auto;
+  display: flex;
+  padding: 20px;
+}
+
+main::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100%;
+  /* Half width */
+  height: 100%;
+}
+
+/*LEFT SIDE*/
+.sidebar {
+  min-height: 625px;
+  width: 225px;
+  border-radius: 8px;
+}
+
+.profile-photo {
+  opacity: 1;
+  height: 250px;
+  width: 250px;
+  position: relative;
+  overflow: hidden;
+  background: url('https://qph.cf2.quoracdn.net/main-qimg-f32f85d21d59a5540948c3bfbce52e68');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.file-uploader {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.upload-icon {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #ccc;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #bbb;
+}
+
+.profile-picture:hover .upload-icon {
+  opacity: 10;
+}
+
+.profile-photo {
+  width: 125px;
+  height: 125px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.image-content {
+  height: 150px;
+}
+
+.profile-details-content {
+  margin-top: 55px;
+  min-height: 650px;
+}
+
+.profile-details {
+  margin-top: -30px;
+  padding: 20px;
+  background-color: white;
+  list-style: none;
+  font-size: 14px;
+  max-width: 225px;
+  min-height: 675px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-details h3 {
+  margin-bottom: 20px;
+  padding-left: 15%;
+  font-size: 20px;
+  font-family: 'LobsterFont';
+}
+
+.profile-details li {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.profile-content {
+  padding-top: 1.75%;
+  width: 60%;
+  margin: 0 20px;
+}
+
+.user-info {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.sameline {
+  margin-top: 20px;
+  line-break: normal;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.first {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-info h1 {
+  font-size: 30px;
+
+}
+
+.user-info p {
+  color: #FFFFFF;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-bottom: 2px solid #000;
+}
+
+.content {
+  margin-top: 15%;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 675px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.section {
+  margin-top: 5%;
+  padding: 5px;
+  border-radius: 8px;
+  min-height: 200px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  padding: 8px;
+  min-height: 200px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  margin: 10px;
+}
+
+.hBTN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #67BABD;
+  color: white;
+  padding: 3.5px, 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.personality-questions {
+  margin-top: 16%;
+  min-height: 650px;
+  width: 20%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.personality-questions h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: 'LobsterFont';
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

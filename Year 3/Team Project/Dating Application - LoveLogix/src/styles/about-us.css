@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'LobsterFont';
+  src: url('./fonts/LobsterFont.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Robotoload';
+  src: url('./fonts/Robotoload.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* styles.css */
+body {
+  font-family: 'Robotoload';
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ff8a8a, #83C1D5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styling */
+header {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+/* Navigation styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+
+  margin-right: 20px;
+  margin-top: 0px;
+}
+
+/*Styling buttons*/
+
+/*about button*/
+.about_button {
+  background-color: #67BABD;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: Roboto;
+  transition: background-color 0.3s;
+}
+
+.about_button:hover {
+  background-color: #387678;
+}
+
+/*login button coding*/
+
+.login_button {
+  background-color: #67BABD;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: Roboto;
+  transition: background-color 0.3s;
+}
+
+.login_button:hover {
+  background-color: #387678;
+}
+
+/*end of button styling*/
+
+/* About Section */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  /* Prevent overlap with fixed header */
+}
+
+.about-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  padding: 30px;
+  margin-top: 5%;
+  text-align: left;
+}
+
+.about-title {
+  margin-top: -0.5%;
+  font-family: 'LobsterFont';
+  font-size: 64px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 1.3;
+  color: #333333;
+  margin-bottom: 2em;
+  /* Increased space between paragraphs */
+}

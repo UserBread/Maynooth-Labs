@@ -1,0 +1,204 @@
+/* Reset some global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define Fonts */
+@font-face {
+  font-family: 'Lobster';
+  src: url('./fonts/LobsterFont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Robotoload.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply Fonts Globally */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #ff8a8a, #83C1D5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header Styles */
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.welcome {
+  font-family: 'Lobster', cursive;
+}
+
+/* Navigation Styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.about_button,
+.login_button,
+.create-account-btn {
+  background-color: #67BABD;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.about_button:hover,
+.login_button:hover,
+.create-account-btn:hover {
+  background-color: #387678;
+}
+
+.create-account-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Flexbox Layout for Main Content */
+.flex-container {
+  display: flex;
+  gap: 5%;
+  margin-top: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0;
+  align-self: center;
+}
+
+/* Login Box Styles */
+.login-box {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-box h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.login-box p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.connect {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Field Styles */
+.login-box input[type="email"],
+.login-box input[type="password"],
+.login-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #e8e8e8;
+}
+
+/* Link Styles */
+.forgot-password,
+.No-Account {
+  display: block;
+  margin: 10px 0;
+  color: #0E4040;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.forgot-password:hover,
+.No-Account:hover {
+  text-decoration: underline;
+}
+
+/* Button Styles */
+.sign-in-btn,
+.reset-password-btn,
+.create-account-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.sign-in-btn,
+.reset-password-btn {
+  background-color: #0E4040;
+}
+
+.sign-in-btn:hover,
+.reset-password-btn:hover {
+  background-color: #387678;
+}
+
+.create-account-btn {
+  background-color: #67BABD;
+}
+
+.create-account-btn:hover {
+  background-color: #387678;
+}
+
+/* Image Container */
+.image-container {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
